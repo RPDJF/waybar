@@ -10,7 +10,7 @@
         "clock",
         "custom/weather",
         "custom/moon",
-        "custom/wall",
+        //"custom/wall",
         "hyprland/workspaces"
     ],
     "modules-center": [
