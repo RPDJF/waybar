@@ -75,8 +75,7 @@
         "tooltip": true,
         "format": "🧠 {}",
         "interval": 30,
-        "exec": "free | grep \"Mem:\" | awk '{printf \"%d%%\\n\", $3/$2 * 100}'
-"
+        "exec": "free | grep \"Mem:\" | awk '{printf \"%d%%\\n\", $3/$2 * 100}'"
     },
     "tray": {
         "icon-size": 18,
