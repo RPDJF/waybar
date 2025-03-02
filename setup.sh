@@ -1,10 +1,10 @@
 #!/bin/sh
 
 echo "installing pip3"
-sudo pacman -S python-pip
+sudo pacman -S python-pip --no-interaction
 
 echo "install module requests (as system package)"
-pip3 install requests ---break-system-packages
+pip3 install requests --break-system-packages
 
 echo "uploading conf to ~/.config/waybar"
 mkdir -p ~/.config/waybar
