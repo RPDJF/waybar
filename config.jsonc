@@ -68,21 +68,22 @@
         "tooltip": true,
         "format": " {}",
         "interval": 30,
-        "exec": "cpu"
+        "exec": "sensors | grep \"Tctl:\" | awk -F \": \" '{gsub(/^[ \t]+|[ \t]+$/, \"\", $2); print $2}'"
     },
     "custom/memory": {
         "tooltip": true,
         "format": "🧠 {}",
         "interval": 30,
-        "exec": "memory"
+        "exec": "free | grep \"Mem:\" | awk '{printf \"%d%%\\n\", $3/$2 * 100}'
+"
     },
     "tray": {
         "icon-size": 18,
         "spacing": 10
     },
     "clock": {
-        "format": "{: %I:%M %p  %a, %b %e}",
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt>{calendar}</tt>"
+        "format": "  {:%I:%M %p    %a, %b %e}",
+        "tooltip-format": "<big>{:%Y %B</big>}\n<tt>{calendar}</tt>"
     },
     "backlight": {
         "device": "intel_backlight",
