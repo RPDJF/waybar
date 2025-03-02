@@ -57,12 +57,13 @@
         "exec": "moon"
     },
 
-    "custom/wall":{
+	// i dont know what the guy was doing here
+    /*"custom/wall":{
         "format": "{}",
         "interval":60,
         "exec":"r-wall & ",
         "format-alt":"r-wall &"
-    },
+    },*/
 
     "custom/temperature": {
         "tooltip": true,
