@@ -9,7 +9,7 @@
     "modules-left": [
         "clock",
         "custom/weather",
-        "custom/moon",
+        //"custom/moon",
         //"custom/wall",
         "hyprland/workspaces"
     ],
@@ -52,11 +52,12 @@
         "exec": "~/.config/waybar/scripts/waybar-wttr.py",
         "return-type": "json"
     },
-    "custom/moon": {
+	// i dont know what the guy was doing here
+    /*"custom/moon": {
         "format": "{}",
         "interval": 3600,
         "exec": "moon"
-    },
+    },*/
 
 	// i dont know what the guy was doing here
     /*"custom/wall":{
@@ -83,12 +84,12 @@
         "spacing": 10
     },
     "clock": {
-        "format": "  {:%I:%M %p    %a, %b %e}",
+        "format": "   {:%I:%M %p      %a, %b %e}",
         "tooltip-format": "<big>{:%Y %B</big>}\n<tt>{calendar}</tt>"
     },
     "backlight": {
         "device": "intel_backlight",
-        "format": "{icon} {percent}%",
+        "format": "{icon}  {percent}%",
         "format-icons": [
             "󰃞",
             "󰃟",
@@ -122,7 +123,7 @@
         ]
     },
     "pulseaudio": {
-        "format": "{icon} {volume}%",
+        "format": "{icon}   {volume}%",
         "tooltip": false,
         "format-muted": " Muted",
         "on-click": "pamixer -t",
@@ -153,7 +154,7 @@
         "scroll-step": 5
     },
     "network": {
-        "format-wifi": "  {signalStrength}%",
+        "format-wifi": "    {signalStrength}%",
         "format-ethernet": "{ipaddr}/{cidr}",
         "tooltip-format": "{essid} - {ifname} via {gwaddr}",
         "format-linked": "{ifname} (No IP)",
